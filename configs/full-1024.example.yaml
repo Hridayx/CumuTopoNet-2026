@@ -1,0 +1,11 @@
+# Paths are resolved relative to this configuration file.
+dataset:
+  path: ../data/DroneDetect_V2.zip
+workspace: ../work/full-1024
+runtime:
+  cpus: 8
+  archive_readers: 2
+  feature_workers: 6
+  heartbeat_seconds: 60
+storage:
+  minimum_free_gb: 100

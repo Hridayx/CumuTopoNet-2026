@@ -1,0 +1,18 @@
+# Paths are resolved relative to this configuration file.
+dataset:
+  path: ../data/DroneDetect_V2.zip
+  windows_per_recording: 1024
+  session_metadata: null
+workspace: ../work/matched-128
+runtime:
+  cpus: 8
+  archive_readers: 2
+  feature_workers: 6
+  heartbeat_seconds: 60
+  monitor_seconds: 60
+budget:
+  hours: 72
+  reserve_hours: 12
+  core_target_hours: 48
+  safety_factor: 1.5
+  gpu_workers: 1

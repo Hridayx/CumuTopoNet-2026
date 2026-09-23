@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cumutoponet"
+version = "1.0.0"
+description = "CumuTopoNet drone-RF classification and analysis tools"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "numpy==2.2.6", "scipy==1.16.1", "scikit-learn==1.7.1",
+  "ripser==0.6.12", "PyYAML==6.0.2", "matplotlib==3.10.5",
+  "torch==2.8.0", "threadpoolctl==3.6.0", "psutil==7.0.0"
+]
+
+[project.optional-dependencies]
+test = ["pytest==8.4.1"]
+
+[project.scripts]
+cumutopo = "cumutoponet.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
